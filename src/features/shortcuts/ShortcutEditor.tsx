@@ -124,14 +124,14 @@ export const ShortcutEditor = ({
           <div className="theme-border-soft mt-auto flex flex-wrap gap-2 border-t pt-4">
             <button
               type="submit"
-              className="theme-primary-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+              className="theme-primary-btn rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
             >
               Salvar
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="theme-ghost-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+              className="theme-ghost-btn rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
             >
               Fechar
             </button>
@@ -139,7 +139,7 @@ export const ShortcutEditor = ({
               <button
                 type="button"
                 onClick={onDelete}
-                className="theme-danger-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+                className="theme-danger-btn rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
               >
                 Excluir
               </button>
