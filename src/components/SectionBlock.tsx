@@ -13,7 +13,7 @@ export const SectionBlock = ({
   count,
   children
 }: SectionBlockProps) => (
-  <section className="theme-panel space-y-3 rounded-[26px] border p-4 shadow-panel">
+  <section className="theme-panel space-y-3 rounded-md border p-4 shadow-md">
     <div className="flex items-start justify-between gap-4">
       <div>
         <h2 className="theme-text text-sm font-semibold uppercase tracking-[0.2em]">
