@@ -17,7 +17,7 @@ export const ShortcutCard = ({
   onDelete,
   onToggleFavorite
 }: ShortcutCardProps) => (
-  <article className="theme-surface rounded-2xl border p-4">
+  <article className="theme-surface rounded-md border p-4">
     <div className="flex items-start justify-between gap-3">
       <div>
         <div className="flex flex-wrap items-center gap-2">
@@ -29,9 +29,7 @@ export const ShortcutCard = ({
           ) : null}
         </div>
         {item.description ? (
-          <p className="theme-text-muted mt-2 text-sm leading-5">
-            {item.description}
-          </p>
+          <p className="theme-text-muted mt-2 text-sm leading-5">{item.description}</p>
         ) : null}
       </div>
     </div>
@@ -57,10 +55,8 @@ export const ShortcutCard = ({
       <button
         type="button"
         onClick={onCopy}
-        className={`rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition ${
-          copied
-            ? "theme-primary-btn"
-            : "theme-ghost-btn"
+        className={`rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition ${
+          copied ? "theme-primary-btn" : "theme-ghost-btn"
         }`}
       >
         {copied ? "Copiado" : "Copiar"}
@@ -68,21 +64,21 @@ export const ShortcutCard = ({
       <button
         type="button"
         onClick={onToggleFavorite}
-        className="theme-ghost-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+        className="theme-ghost-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
       >
         {item.favorite ? "Desfavoritar" : "Favoritar"}
       </button>
       <button
         type="button"
         onClick={onEdit}
-        className="theme-ghost-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+        className="theme-ghost-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
       >
         Editar
       </button>
       <button
         type="button"
         onClick={onDelete}
-        className="theme-danger-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+        className="theme-danger-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
       >
         Remover
       </button>
