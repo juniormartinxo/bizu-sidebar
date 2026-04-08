@@ -34,14 +34,12 @@ export const SettingsPanel = ({
 
   return (
     <div className="fixed inset-0 z-20 flex items-stretch justify-end bg-black/45 backdrop-blur-sm">
-      <div className="theme-panel flex h-full w-full max-w-[24rem] flex-col border-l shadow-shell">
+      <div className="theme-panel flex h-full w-full flex-col border-l shadow-shell">
         <div className="theme-border-soft border-b px-4 py-4">
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[color:var(--accent)]">
             Configuracoes
           </p>
-          <h2 className="theme-text mt-2 text-lg font-semibold">
-            Comportamento desktop
-          </h2>
+          <h2 className="theme-text mt-2 text-lg font-semibold">Comportamento desktop</h2>
           <p className="theme-text-muted mt-2 text-sm leading-6">
             Ajustes do atalho global e inicializacao com o Windows.
           </p>
@@ -50,9 +48,7 @@ export const SettingsPanel = ({
         <div className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
           <section className="theme-surface rounded-2xl border p-4">
             <div>
-              <h3 className="theme-text text-sm font-semibold">
-                Iniciar com o Windows
-              </h3>
+              <h3 className="theme-text text-sm font-semibold">Iniciar com o Windows</h3>
               <p className="theme-text-muted mt-1 text-xs leading-5">
                 Controla o registro do aplicativo para abrir automaticamente.
               </p>
@@ -100,7 +96,7 @@ export const SettingsPanel = ({
                     key={option}
                     type="button"
                     onClick={() => onThemeChange(option)}
-                    className={`rounded-xl px-3 py-3 text-xs font-semibold uppercase tracking-[0.18em] transition ${
+                    className={`rounded-md px-3 py-3 mt-1 text-xs font-semibold uppercase tracking-[0.18em] transition ${
                       active ? "theme-primary-btn" : "theme-ghost-btn"
                     }`}
                   >
@@ -113,9 +109,7 @@ export const SettingsPanel = ({
 
           <section className="theme-surface rounded-2xl border p-4">
             <div>
-              <h3 className="theme-text text-sm font-semibold">
-                Atalho global
-              </h3>
+              <h3 className="theme-text text-sm font-semibold">Atalho global</h3>
               <p className="theme-text-muted mt-1 text-xs leading-5">
                 Exemplo: <span className="font-mono">Ctrl+Shift+;</span>
               </p>
@@ -124,7 +118,7 @@ export const SettingsPanel = ({
               value={shortcutDraft}
               onChange={(event) => setShortcutDraft(event.target.value)}
               disabled={!isDesktop || busy}
-              className="theme-input w-full rounded-2xl px-3 py-3 text-sm outline-none focus:border-[color:var(--accent)]"
+              className="theme-input w-full rounded-2xl px-3 py-3 mt-1 text-sm outline-none focus:border-[color:var(--accent)]"
             />
             <button
               type="button"
@@ -137,7 +131,7 @@ export const SettingsPanel = ({
                   setBusy(false);
                 }
               }}
-              className="theme-primary-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] disabled:cursor-not-allowed disabled:opacity-60"
+              className="theme-primary-btn rounded-md px-4 py-3 mt-1 text-xs font-semibold uppercase tracking-[0.18em] disabled:cursor-not-allowed disabled:opacity-60"
             >
               Aplicar
             </button>
@@ -158,7 +152,7 @@ export const SettingsPanel = ({
           <button
             type="button"
             onClick={onClose}
-            className="theme-ghost-btn w-full rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+            className="theme-ghost-btn w-full rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
           >
             Fechar
           </button>
