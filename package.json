@@ -1,0 +1,43 @@
+{
+  "name": "bizu-sidebar",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "icons:build": "node scripts/build-ico.mjs",
+    "typecheck": "tsc --noEmit",
+    "tauri:dev": "node scripts/build-ico.mjs && tauri dev",
+    "tauri:build": "node scripts/build-ico.mjs && tauri build && node scripts/rename-bundles.mjs release",
+    "tauri:build:debug": "node scripts/build-ico.mjs && tauri build --debug && node scripts/rename-bundles.mjs debug"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-autostart": "^2.0.0",
+    "@tauri-apps/plugin-clipboard-manager": "^2.0.0",
+    "@tauri-apps/plugin-fs": "^2.0.0",
+    "@tauri-apps/plugin-global-shortcut": "^2.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  },
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
+}
