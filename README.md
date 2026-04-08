@@ -2,6 +2,10 @@
 
 Aplicacao desktop para Windows com `Tauri 2 + React + Vite + TypeScript`, pensada como uma barra lateral fixa no lado direito para consulta rapida de notas e comandos.
 
+## Screenshot
+
+<img src="docs/readme-screenshot.png" alt="Screenshot da aplicacao Bizu Sidebar" width="280" />
+
 ## Stack
 
 - Tauri 2
