@@ -16,13 +16,8 @@ const formatDate = (value: string) =>
     timeStyle: "short"
   }).format(new Date(value));
 
-export const NoteCard = ({
-  note,
-  onEdit,
-  onDelete,
-  onTogglePinned
-}: NoteCardProps) => (
-  <article className="theme-surface rounded-2xl border p-4">
+export const NoteCard = ({ note, onEdit, onDelete, onTogglePinned }: NoteCardProps) => (
+  <article className="theme-surface rounded-lg border p-4">
     <div className="flex items-start justify-between gap-3">
       <div>
         <h3 className="theme-text text-sm font-semibold">{note.title}</h3>
@@ -60,21 +55,21 @@ export const NoteCard = ({
       <button
         type="button"
         onClick={onTogglePinned}
-        className="theme-ghost-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+        className="theme-ghost-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
       >
         {note.pinned ? "Desfixar" : "Fixar"}
       </button>
       <button
         type="button"
         onClick={onEdit}
-        className="theme-ghost-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+        className="theme-ghost-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
       >
         Editar
       </button>
       <button
         type="button"
         onClick={onDelete}
-        className="theme-danger-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+        className="theme-danger-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
       >
         Remover
       </button>
