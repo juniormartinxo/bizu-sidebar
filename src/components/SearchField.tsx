@@ -15,7 +15,7 @@ export const SearchField = ({ value, onChange }: SearchFieldProps) => (
       placeholder="filtrar notas, comandos, tags"
       className="theme-text w-full bg-transparent text-sm outline-none"
     />
-    <span className="theme-border theme-text-soft rounded-lg border px-2 py-1 text-[10px] uppercase tracking-[0.18em]">
+    <span className="theme-border theme-text-soft rounded-md border px-2 py-1 text-[10px] uppercase tracking-[0.18em]">
       /
     </span>
   </label>
