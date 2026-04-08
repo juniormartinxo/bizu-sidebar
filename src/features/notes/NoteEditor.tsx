@@ -77,7 +77,9 @@ export const NoteEditor = ({
             <textarea
               value={content}
               onChange={(event) => setContent(event.target.value)}
-              placeholder={"# Exemplo\n- Item 1\n- [ ] Revisar\n- [link](https://exemplo.com)"}
+              placeholder={
+                "# Exemplo\n- Item 1\n- [ ] Revisar\n- [link](https://exemplo.com)"
+              }
               className="theme-input min-h-[16rem] w-full rounded-2xl px-3 py-3 text-sm leading-6 outline-none focus:border-[color:var(--accent)]"
             />
           </label>
@@ -95,14 +97,14 @@ export const NoteEditor = ({
           <div className="theme-border-soft mt-auto flex flex-wrap gap-2 border-t pt-4">
             <button
               type="submit"
-              className="theme-primary-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+              className="theme-primary-btn rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
             >
               Salvar
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="theme-ghost-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+              className="theme-ghost-btn rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
             >
               Fechar
             </button>
@@ -110,7 +112,7 @@ export const NoteEditor = ({
               <button
                 type="button"
                 onClick={onDelete}
-                className="theme-danger-btn rounded-xl px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
+                className="theme-danger-btn rounded-md px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em]"
               >
                 Excluir
               </button>
