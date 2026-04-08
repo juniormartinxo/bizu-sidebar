@@ -11,11 +11,8 @@ const OPTIONS: Array<{ label: string; value: ViewMode }> = [
   { label: "Atalhos", value: "shortcuts" }
 ];
 
-export const SegmentedControl = ({
-  value,
-  onChange
-}: SegmentedControlProps) => (
-  <div className="theme-surface grid grid-cols-3 rounded-2xl border p-1">
+export const SegmentedControl = ({ value, onChange }: SegmentedControlProps) => (
+  <div className="theme-surface grid grid-cols-3 rounded-2xl border">
     {OPTIONS.map((option) => {
       const active = option.value === value;
 
@@ -24,10 +21,8 @@ export const SegmentedControl = ({
           key={option.value}
           type="button"
           onClick={() => onChange(option.value)}
-          className={`rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition ${
-            active
-              ? "theme-primary-btn"
-              : "theme-text-muted hover:brightness-105"
+          className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition ${
+            active ? "theme-primary-btn" : "theme-text-muted hover:brightness-105"
           }`}
         >
           {option.label}
