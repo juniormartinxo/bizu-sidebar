@@ -85,7 +85,7 @@ export const AppShell = ({
               onClick={onDockRight}
               title="Ancorar a direita"
               aria-label="Ancorar a direita"
-              className="theme-ghost-btn flex h-9 w-9 items-center justify-center rounded-xl transition hover:brightness-105"
+              className="theme-ghost-btn flex h-9 w-9 items-center justify-center rounded-md transition hover:brightness-105"
             >
               <AnchorIcon />
             </button>
@@ -94,7 +94,7 @@ export const AppShell = ({
               onClick={onHide}
               title="Fechar para a bandeja"
               aria-label="Fechar para a bandeja"
-              className="theme-ghost-btn flex h-9 w-9 items-center justify-center rounded-xl transition hover:brightness-105"
+              className="theme-ghost-btn flex h-9 w-9 items-center justify-center rounded-md transition hover:brightness-105"
             >
               <CloseIcon />
             </button>
@@ -120,7 +120,7 @@ export const AppShell = ({
 
           <div className="theme-text-muted text-xs flex flex-col items-end gap-0">
             <span className="font-bold">Atalho global:</span>
-            <span className="py-1 px-2 bg-amber-100 rounded-lg mt-3">
+            <span className="py-1 px-2 rounded-md mt-3 bg-teal-900 text-teal-200">
               {shortcutLabel}
             </span>
           </div>
@@ -131,21 +131,21 @@ export const AppShell = ({
         <button
           type="button"
           onClick={onNewNote}
-          className="theme-primary-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition hover:brightness-110"
+          className="theme-primary-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition hover:brightness-110"
         >
           Nota
         </button>
         <button
           type="button"
           onClick={onNewShortcut}
-          className="theme-ghost-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+          className="theme-ghost-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
         >
           Atalho
         </button>
         <button
           type="button"
           onClick={onOpenSettings}
-          className="theme-ghost-btn rounded-xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
+          className="theme-ghost-btn rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition"
         >
           Config
         </button>
